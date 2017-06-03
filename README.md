@@ -1,7 +1,7 @@
 # React-IoT
 React-IoT is a React way to program hardware devices and internet of things
 =========
-[![Build Status](https://travis-ci.org/vnovick/React-IoT.svg?branch=master)](https://travis-ci.org/vnovick/React-IoT)
+[![Build Status](https://travis-ci.org/vnovick/react-iot.svg?branch=master)](https://travis-ci.org/vnovick/react-iot)
 
 ## Installation
 
