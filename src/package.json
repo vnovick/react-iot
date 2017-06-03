@@ -35,7 +35,6 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
     "chai": "^4.0.0",
-    "copy-webpack-plugin": "^4.0.1",
     "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
@@ -45,18 +44,12 @@
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
-    "node-loader": "^0.6.0",
     "uglifyjs-webpack-plugin": "^0.4.3",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "johnny-five": "^0.10.13",
-    "prop-types": "^15.5.10",
-    "react": "^16.0.0-alpha.5",
-    "react-dom": "^16.0.0-alpha.5"
-  },
-  "peerDependencies": {
-    "react": "^16.0.0-alpha.5"
+    "react": "16.0.0-alpha.5",
+    "react-dom": "16.0.0-alpha.5"
   }
 }

@@ -1,8 +1,6 @@
 {
-    "extends": "airbnb",
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ]
+  "extends": "airbnb",
+  "rules": {
+    "func-names": ["error", "never"]
+  }
 }
