@@ -1,5 +1,5 @@
-# React-IoT
-React-IoT is a React way to program hardware devices and internet of things
+# react-iot
+react-iot is a React way to program hardware devices and internet of things
 =========
 
 ## Installation
