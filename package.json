@@ -1,6 +1,6 @@
 {
   "name": "react-iot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react-iot is a React renderer for Johny Five JavaScript framework",
   "main": "./lib",
   "scripts": {
