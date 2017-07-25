@@ -44,12 +44,14 @@ export default class Button extends React.Component {
   }
 
   clearButtonEvents(){
-    this.eventMap && this.eventMap.forEach(({ eventName, cb }) => {
-      this.button.off(eventName, cb)
-    })
+    const pin = new five.Pin(this.props.pin);
+    pin.low();
+    console.log(this.button);
+    this.button = null;
   }
 
   componentWillUnmount(){
+    console.log(`unmount button at pin ${this.props.pin}`)
     this.clearButtonEvents();
   }
 
