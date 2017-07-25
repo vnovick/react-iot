@@ -19,7 +19,7 @@ class App extends React.Component {
     this.socket.emit('land');
   }
 
-  componentWillMount(){
+  componentDidMount(){
     this.socket = require('socket.io-client')('http://localhost:3005');
 
     this.socket.on('connect', () => {
