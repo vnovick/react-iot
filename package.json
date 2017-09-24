@@ -1,0 +1,84 @@
+{
+  "name": "react-iot",
+  "version": "0.0.4",
+  "description": "React IoT - Johnny Five React renderer",
+  "main": "./lib",
+  "scripts": {
+    "prepack": "npm run build",
+    "build": "WEBPACK_ENV=production webpack -p && flow && npm test",
+    "dev": "webpack-dev-server --content-base ./example --hot",
+    "example": "babel ./example.js | node",
+    "test": "jest --env jsdom --coverage",
+    "test-watch": "jest --env jsdom --watch",
+    "cover": "node_modules/babel-istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec --require babel-register **/*.spec.js"
+  },
+  "engines": {
+    "node": ">=8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnovick/react-iot.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "React",
+    "ReactDOM",
+    "renderer",
+    "iot",
+    "robotics",
+    "johnny-five"
+  ],
+  "author": "Vladimir Novick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vnovick/react-iot/issues"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "johnny-five": "^0.11.6",
+    "path": "^0.12.7",
+    "prop-types": "^15.5.10",
+    "react": "16.0.0-alpha.6",
+    "react-dom": "16.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-jest": "^21.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "coveralls": "^2.13.1",
+    "eslint": "^4.7.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.3.0",
+    "flow-bin": "^0.54.1",
+    "flow-typed": "^2.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.1.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0-alpha.6"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover",
+      "json-summary"
+    ]
+  }
+}

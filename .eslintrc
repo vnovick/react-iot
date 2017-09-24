@@ -1,0 +1,30 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "func-names": [
+      "error",
+      "never"
+    ],
+    "import/prefer-default-export": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "no-magic-numbers": "off",
+    "no-extra-parens": "off",
+    "max-params": "off",
+    "new-cap": "off",
+    "no-unused-vars": "off",
+    "func-style": "off",
+    "arrow-parens": "off",
+    "no-use-before-define": "off",
+    "comma-dangle": "off",
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off"
+  },
+  "plugins": [
+    "flowtype"
+  ]
+}

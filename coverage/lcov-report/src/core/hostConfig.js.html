@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/core/hostConfig.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/core</a> hostConfig.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/36</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createReactIoTInstance } from '../components';
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >createInstance(</span>
+  type, props, rootContainerInstance, hostContext, internalInstanceHandle
+) {
+<span class="cstat-no" title="statement not covered" >  return createReactIoTInstance(</span>
+    type, props, rootContainerInstance, hostContext
+  );
+}
+&nbsp;
+&nbsp;
+const log = <span class="fstat-no" title="function not covered" >(.</span>..args) =&gt; {
+<span class="cstat-no" title="statement not covered" >  console.log(...args);</span>
+};
+&nbsp;
+const emptyObject = {};
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >appendInitialChild(</span>parentInstance, child) {
+<span class="cstat-no" title="statement not covered" >  log('appendInitialChild', child);</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >appendChild(</span>parentInstance, child) {
+<span class="cstat-no" title="statement not covered" >  log('appendChild', child);</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >removeChild(</span>parentInstance, child) {
+<span class="cstat-no" title="statement not covered" >  log('removeChild', child);</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >insertBefore(</span>parentInstance, child, beforeChild) {
+<span class="cstat-no" title="statement not covered" >  log('insertBefore');</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >finalizeInitialChildren(</span>
+  instance, type, props, rootContainerInstance
+) {
+<span class="cstat-no" title="statement not covered" >  log('finalizeInitialChildren');</span>
+  // setInitialProperties(instance, type, props, rootContainerInstance);
+<span class="cstat-no" title="statement not covered" >  return false;</span>
+}
+&nbsp;
+// prepare update is where you compute the diff for an instance. This is
+// done here to separate computation of the diff to the applying of the
+// diff. Fiber can reuse this work even if it pauses or aborts rendering a
+// subset of the tree.
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >prepareUpdate(</span>
+  instance, type, oldProps, newProps, rootContainerInstance,
+  hostContext
+) {
+<span class="cstat-no" title="statement not covered" >  log('TODO: prepareUpdate');</span>
+<span class="cstat-no" title="statement not covered" >  return null;</span>
+  // return diffProperties(instance, type, oldProps, newProps,
+  // rootContainerInstance, hostContext);
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >commitUpdate(</span>
+  instance,
+  updatePayload,
+  type,
+  oldProps,
+  newProps,
+  internalInstanceHandle,
+) {
+  // Apply the diff to the DOM node.
+  // updateProperties(instance, updatePayload, type, oldProps, newProps);
+<span class="cstat-no" title="statement not covered" >  log('TODO: updateProperties');</span>
+}
+&nbsp;
+// commitMount is called after initializeFinalChildren *if*
+// `initializeFinalChildren` returns true.
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >commitMount(</span>
+  instance, type, newProps, internalInstanceHandle
+) {
+<span class="cstat-no" title="statement not covered" >  log('commitMount');</span>
+  // noop
+}
+&nbsp;
+// HostContext is an internal object or reference for any bookkeeping your
+// renderer may need to do based on current location in the tree. In DOM
+// this is necessary for calling the correct `document.createElement` calls
+// based upon being in an `html`, `svg`, `mathml`, or other context of the
+// tree.
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >getRootHostContext(</span>rootContainerInstance) {
+<span class="cstat-no" title="statement not covered" >  log('getRootHostContext');</span>
+<span class="cstat-no" title="statement not covered" >  return emptyObject;</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >getChildHostContext(</span>parentHostContext, type) {
+<span class="cstat-no" title="statement not covered" >  log('getChildHostContext');</span>
+<span class="cstat-no" title="statement not covered" >  return emptyObject;</span>
+}
+&nbsp;
+// getPublicInstance should be the identity function in 99% of all
+// scenarios. It was added to support the `getNodeMock` functionality for
+// the TestRenderers.
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >getPublicInstance(</span>instance) {
+<span class="cstat-no" title="statement not covered" >  log('getPublicInstance');</span>
+<span class="cstat-no" title="statement not covered" >  if (instance == null) {</span>
+<span class="cstat-no" title="statement not covered" >    return null;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  console.log(instance);</span>
+<span class="cstat-no" title="statement not covered" >  return instance != null &amp;&amp; instance.props.toJSON(instance);</span>
+}
+&nbsp;
+// the prepareForCommit and resetAfterCommit methods are necessary for any
+// global side-effects you need to trigger in the host environment. In
+// ReactDOM this does things like disable the ReactDOM events to ensure no
+// callbacks are fired during DOM manipulations
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >prepareForCommit(</span>) {
+<span class="cstat-no" title="statement not covered" >  log('prepareForCommit');</span>
+  // noop
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >resetAfterCommit(</span>) {
+<span class="cstat-no" title="statement not covered" >  log('resetAfterCommit');</span>
+  // noop
+}
+&nbsp;
+// the following four methods are regarding TextInstances. In our example
+// renderer we don’t have specific text nodes like the DOM does so we’ll
+// just noop all of them.
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >shouldSetTextContent(</span>props) {
+<span class="cstat-no" title="statement not covered" >  log('shouldSetTextContent');</span>
+<span class="cstat-no" title="statement not covered" >  return false;</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >resetTextContent(</span>instance) {
+<span class="cstat-no" title="statement not covered" >  log('resetTextContent');</span>
+  // noop
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >createTextInstance(</span>
+  text, rootContainerInstance, hostContext, internalInstanceHandle
+) {
+<span class="cstat-no" title="statement not covered" >  log('createTextInstance');</span>
+<span class="cstat-no" title="statement not covered" >  return null;</span>
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >commitTextUpdate(</span>textInstance, oldText, newText) {
+<span class="cstat-no" title="statement not covered" >  log('commitTextUpdate');</span>
+  // noop
+<span class="cstat-no" title="statement not covered" >  throw new Error('commitTextUpdate should not be called');</span>
+}
+&nbsp;
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >scheduleAnimationCallback(</span>) {
+<span class="cstat-no" title="statement not covered" >  log('scheduleAnimationCallback');</span>
+}
+&nbsp;
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >scheduleDeferredCallback(</span>) {
+<span class="cstat-no" title="statement not covered" >  log('scheduleDeferredCallback');</span>
+}
+&nbsp;
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >shouldDeprioritizeSubtree(</span>) {
+<span class="cstat-no" title="statement not covered" >  return false;</span>
+}
+&nbsp;
+export const useSyncScheduling = true;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Sep 24 2017 07:53:35 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
